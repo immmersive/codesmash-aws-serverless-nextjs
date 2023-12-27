@@ -1,0 +1,1 @@
+CodeSmash Next.js boilerplate
