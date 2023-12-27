@@ -1,0 +1,20 @@
+version: 0.2
+
+env:    
+  variables:
+    s3_bucket: "$s3_bucket"
+
+phases:
+
+  install:
+    commands:
+      - npm i
+      
+  build:
+    commands:
+      - cd app/web
+      - npm i 
+      - npm run build      
+      - cd out
+      - aws s3 rm s3://${s3_bucket} --recursive
+      - aws s3 sync . s3://${s3_bucket}
