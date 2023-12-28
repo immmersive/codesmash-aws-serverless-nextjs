@@ -8,12 +8,14 @@ phases:
 
   install:
     commands:
+      - n 18
+      - npm i npm@latest -g
       - npm i
+      - node -v
+      - npm -v
       
   build:
     commands:
-      - cd app/web
-      - npm i 
       - npm run build      
       - cd out
       - aws s3 rm s3://${s3_bucket} --recursive
