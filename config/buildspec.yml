@@ -11,8 +11,6 @@ phases:
       - n 18
       - npm i npm@latest -g
       - npm i
-      - node -v
-      - npm -v
       
   build:
     commands:
