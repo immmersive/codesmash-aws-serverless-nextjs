@@ -18,6 +18,6 @@ Minimum Node.js version is 18.7
 To run the app locally run
 
 ```bash 
-npm run start
+npm run dev
 ```
 
